@@ -27,9 +27,9 @@ export async function mathFact(number = 'random') {
   }
 }
 
-export async function yearFact(number = 'random') {
+export async function yearFact(year = 'random') {
   try {
-    const response = await got(`http://numbersapi.com/${number}/year`);
+    const response = await got(`http://numbersapi.com/${year}/year`);
     return response.body;
   } catch (error) {
     return error.response.body;
