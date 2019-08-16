@@ -1,0 +1,19 @@
+{
+  "name": "numbers-api",
+  "version": "1.0.0",
+  "description": "A wrapper for the numbers API",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Ansel <iamansel@gmail.com> (https://github.com/anselb)",
+  "license": "ISC",
+  "dependencies": {
+    "got": "^9.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  }
+}
