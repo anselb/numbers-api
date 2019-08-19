@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "A wrapper for the numbers API",
   "main": "src/index.js",
+  "module": "esm/index.js",
+  "files": [
+    "esm/*"
+  ],
   "scripts": {
+    "prepare": "rollup --config",
     "test": "jest"
   },
   "author": "Ansel <iamansel@gmail.com> (https://github.com/anselb)",
@@ -14,6 +19,7 @@
   "devDependencies": {
     "eslint": "^6.1.0",
     "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2"
+    "eslint-plugin-import": "^2.18.2",
+    "rollup": "^1.19.4"
   }
 }
