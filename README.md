@@ -1,4 +1,8 @@
 # Numbers API Wrapper
+
+![npm bundle size](https://img.shields.io/bundlephobia/min/numbers-api-wrapper.svg)
+![npm](https://img.shields.io/npm/v/numbers-api-wrapper.svg)
+
 A wrapper for the Numbers API, an API that return number facts.
 
 ## Methods you can use
