@@ -9,7 +9,7 @@ function checkNumber(number) {
 
 export async function randomFact() {
   try {
-    const response = await got('http://numbersapi.com/random/');
+    const response = await got('http://numbersapi.com/random');
     return response.body;
   } catch (error) {
     return error.response.body;
