@@ -7,12 +7,20 @@ function checkNumber(number) {
   }
 }
 
+function handleError(error) {
+  if (Object.prototype.hasOwnProperty.call(error, 'response')) {
+    return error.response.body;
+  }
+  return error.name;
+}
+
 export async function randomFact() {
   try {
     const response = await got('http://numbersapi.com/random');
     return response.body;
   } catch (error) {
-    return error.response.body;
+    const errorInfo = handleError(error);
+    return errorInfo;
   }
 }
 
@@ -23,7 +31,8 @@ export async function triviaFact(number = 'random') {
     const response = await got(`http://numbersapi.com/${number}/trivia`);
     return response.body;
   } catch (error) {
-    return error.response.body;
+    const errorInfo = handleError(error);
+    return errorInfo;
   }
 }
 
@@ -34,7 +43,8 @@ export async function mathFact(number = 'random') {
     const response = await got(`http://numbersapi.com/${number}/math`);
     return response.body;
   } catch (error) {
-    return error.response.body;
+    const errorInfo = handleError(error);
+    return errorInfo;
   }
 }
 
@@ -45,7 +55,8 @@ export async function yearFact(year = 'random') {
     const response = await got(`http://numbersapi.com/${year}/year`);
     return response.body;
   } catch (error) {
-    return error.response.body;
+    const errorInfo = handleError(error);
+    return errorInfo;
   }
 }
 
@@ -67,6 +78,7 @@ export async function dateFact(month = 'random', day = 'random') {
     const response = await got(dateFactURL);
     return response.body;
   } catch (error) {
-    return error.response.body;
+    const errorInfo = handleError(error);
+    return errorInfo;
   }
 }
